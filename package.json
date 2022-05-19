@@ -1,0 +1,42 @@
+{
+    "name": "coffee-theme-light",
+    "displayName": "Morning Coffee i ",
+    "description": "Theme for the early morning coders",
+    "publisher": "Chookith",
+    "author": {
+      "name":"Chookith"
+    },
+    "licenses": [],
+    "version": "1.0.0",
+    "engines": {
+      "vscode": "^1.22.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Chookith/light-coffee.git"
+    },
+    "homepage": "https://github.com/Chookith/light-coffee#readme",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Chookith/light-coffee/issues"
+    },
+    "galleryBanner": {
+      "color": "#9b6f4f",
+      "theme": "light"
+    },
+    "keywords": [
+      "Theme",
+      "coffee"
+    ],
+  
+    "contributes": {
+      "themes": [
+        {
+          "label": "Morning Coffee i",
+          "uiTheme": "vs-dark",
+          "path": "./themes/Morning-Coffee-i-color-theme.json"
+        }
+      ]
+    }
+  
+  }
