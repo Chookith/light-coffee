@@ -3,7 +3,7 @@
     "type":"Light",
     "colors":{
         "editor.background": "#e0d3c9",
-        "editor.foreground": "#e0d3c9",
+        "editor.foreground": "#4d3a2b",
         "editor.lineHighlightBorder": "#4d3a2bd7",
         "editor.lineHighlightBackground": "#664d3ae5",
         "editorLineNumber.activeForeground": "#e0d3c9",
