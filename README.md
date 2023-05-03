@@ -34,6 +34,6 @@ if there is any issue with it, theres any recommendation or another language you
 
 this is where to put them
 
->
+>https://github.com/Chookith/light-coffee/issues
 
 I'll see what I can do!
