@@ -15,7 +15,7 @@ its called 'Late Night Mocha i'
 
 ## I look like this 
 
-![Morning Cappuccino Example]()
+![Morning Cappuccino Example](https://raw.githubusercontent.com/Chookith/light-coffee/main/Images/Morning%20Cappuccino%20Example%201.1.png?token=GHSAT0AAAAAACCE6OK6YRJ3MD6WYN67N47YZCR7U6A)
 
 ## Installing
 
