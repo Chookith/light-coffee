@@ -280,16 +280,32 @@
             "scope": [
                 "punctuation.definition.string.end.js", "punctuation.definition.string.begin.js", "string.quoted.double.js"],
             "settings": {
-                "foreground": "#c29b65",
+                "foreground": "#d19a4e",
                 "fontStyle": "italic"
             }
         },
         {
             "name": "js - if, else, or...",
-            "scope": "keyword.control.conditional.js, keyword.control.loop.js",
+            "scope": ["keyword.control.conditional.js", "keyword.control.loop.js"],
             "settings": {
                 "foreground": "#835728",
                 "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "js - return",
+            "scope": "keyword.control.flow.js",
+            "settings": {
+                "foreground": "#be8a52",
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "js - function Name",
+            "scope": "entity.name.function.js",
+            "settings": {
+                "foreground": "#d4945c",
+                "fontStyle": "bold"
             }
         },
         {
@@ -298,13 +314,6 @@
             "settings": {
                 "foreground": "#8b7462c2",
                 "fontStyle": "italic"
-            }
-        },
-        {
-            "scope": "entity.name.function.js",
-            "settings": {
-                "foreground": "#86786c",
-                "fontStyle": "bold"
             }
         },
         {
@@ -325,7 +334,7 @@
         },
         {
             "name": "python - def, ==",
-            "scope": ["storage.type.function.python", "storage.type.function.async.python", "keyword.control.flow.python", "keyword.operator.logical.python", "keyword.operator.comparison.python"],
+            "scope": ["storage.type.function.python", "storage.type.function.async.python", "keyword.control.flow.python", "keyword.operator.logical.python", "keyword.operator.comparison.python", "keyword.operator.arithmetic.python", "keyword.operator.assignment.python"],
             "settings": {
                 "foreground": "#bb8251",
                 "fontStyle": "italic bold"
@@ -335,7 +344,7 @@
             "name": "python  - fuction Argument sum(i)",
             "scope": "meta.function-call.arguments.python",
             "settings": {
-                "foreground": "#dab67a",
+                "foreground": "#bd934b",
                 "fontStyle": "italic bold"
             }
         },
@@ -348,9 +357,9 @@
         },
         {
             "name": "python - built in  functions (print, choice, send, format)",
-            "scope": ["meta.function-call.generic.python", "support.function.builtin.python"],
+            "scope": ["meta.function-call.python", "support.function.builtin.python"],
             "settings": {
-                "foreground": "#e6a800",
+                "foreground": "#cc9600",
                 "fontStyle": "italic bold"
             }
         },
@@ -360,6 +369,36 @@
             "settings": {
                 "fontStyle": "bold",
                 "foreground": "#c79840"
+            }
+        },
+        {
+            "name": "Python - Function Name",
+            "scope": "entity.name.function.python",
+            "settings": {
+                "foreground": "#8b5e31",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Python- function parameter",
+            "scope": "variable.parameter.function.language.python",
+            "settings": {
+                "foreground": "#b66916",
+                "fontStyle": "italic bold "
+            }
+        },
+        {
+            "name": "python - Numbers",
+            "scope": "constant.numeric.dec.python",
+            "settings": {
+                "foreground": "#cc7f31"
+            }
+        },
+        {
+            "name": "Python - Links",
+            "scope": "string.quoted.docstring.single.python",
+            "settings": {
+                "foreground": "#ca923e"
             }
         },
         {
@@ -374,15 +413,39 @@
             "name": "html - tags",
             "scope": ["entity.name.tag.html", "punctuation.definition.tag.begin.html","meta.tag.metadata.style.end.html", "punctuation.definition.tag.end.html"],
             "settings": {
-                "foreground": "#e5ba85",
+                "foreground": "#CC9600",
                 "fontStyle": "italic bold"
             }
         },
         {
-            "name": "html - attributes (class = ,id = , href =,... )",
+            "name": "html - attributes (id = , href =,... )",
             "scope": "entity.other.attribute-name.html",
             "settings": {
-                "foreground": "#c09365"
+                "foreground": "#c28603"
+            }
+        },
+        {
+            "name": "html - class attribute (Tailwind help)",
+            "scope": "meta.attribute.class.html",
+            "settings": {
+                "foreground": "#9c5c20",
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "html - most dbl quoted string scopes",
+            "scope": "meta.attribute.lang.html, meta.attribute.charset.html, meta.attribute.content.html, meta.attribute.http-equiv.html, meta.attribute.name.html, meta.attribute.content.html, meta.attribute.href.html, meta.attribute.rel.html, meta.attribute.type.html, meta.attribute.wrap.html, meta.attribute.cols.html ,meta.attribute.rows.html, meta.attribute.id.html,meta.attribute.placeholder.html, string.quoted.single.html ",
+            "settings": {
+                "foreground": "#865433",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "html - <h1>This text</h1>",
+            "scope": "text.html.derivative",
+            "settings": {
+                "foreground": "#74410c",
+                "fontStyle": "italic bold"
             }
         },
         {
@@ -429,7 +492,8 @@
             "name": "C# - functions",
             "scope": "entity.name.function.cs",
             "settings": {
-                "foreground": "#d2a44b"
+                "foreground": "#d2a44b",
+                "fontStyle": "bold"
             }
         },
         {
@@ -536,6 +600,62 @@
             "scope": ["markup.list.numbered.markdown", "punctuation.definition.list.begin.markdown"],
             "settings": {
                 "foreground": "#ca8c2f"
+            }
+        },
+        {
+            "name": "OpenSCAD - functions",
+            "scope": "meta.function.scad",
+            "settings": {
+                "foreground": "#8b5e31",
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "OpenSCAD - internal functions(translate())",
+            "scope": "support.function.scad",
+            "settings": {
+                "foreground": "#8b5e31",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "OpenSCAD - Function Names",
+            "scope": "entity.name.function.call.scad",
+            "settings": {
+                "foreground": "#CC9600",
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "OpenSCAD - Parameter Names",
+            "scope": "variable.parameter.function.keyword.scad",
+            "settings": {
+                "foreground": "#BD934B",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "OpenSCAD - +, = , *",
+            "scope": ["keyword.operator.arithmetic.scad", "keyword.operator.assignment.scad"],
+            "settings": {
+                "foreground": "#BB8251",
+                "fontStyle": "italic bold"
+            }
+        },
+        {
+            "name": "OpenSCAD - numbers",
+            "scope": ["constant.numeric.scad", "constant.numeric.float.scad", "constant.numeric.integer.decimal.scad"],
+            "settings": {
+                "foreground": "#b18d6a",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "OpenSCAD - comments",
+            "scope": "comment.line.double-slash.scad",
+            "settings": {
+                "foreground": "#6F5541",
+                "fontStyle": "italic"
             }
         }
     ]
