@@ -68,7 +68,6 @@
     "badge.foreground": "#4d3a2b",
 
     //PROGRESS BAR
-
     "progressBar.background": "#614430",
 
     //LIST AND TREES
@@ -220,95 +219,243 @@
   },
   "tokenColors": [
     {
-      "scope": ["punctuation.separator.key-value"],
-      "settings": {
-        "foreground": "#906851"
-      }
-    },
-    {
-      "name": "css - var names",
-      "scope": ["entity.other.attribute-name.class", "entity.name.tag.css"],
-      "settings": {
-        "foreground": "#b29278",
-        "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "css- commments",
-      "scope": "comment.block.css",
-      "settings": {
-        "foreground": "#6f5541"
-      }
-    },
-    {
-      "name": "js - var names",
-      "scope": "variable.other.readwrite.js",
-      "settings": {
-        "foreground": "#c6ac9c"
-      }
-    },
-    {
-      "name": " JS - variable type (int, var, const)",
-      "scope": "storage.type.js",
-      "settings": {
-        "foreground": "#a37f6a",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "js - functions",
-      "scope": "storage.type.function.js",
-      "settings": {
-        "foreground": "#926852",
-        "fontStyle": "italic bold"
-      }
-    },
-    {
-      "scope": "meta.parameters.js, variable.other.readwrite.js",
-      "settings": {
-        "foreground": "#865331",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "js - strings",
+      "name": "Import as",
       "scope": [
-        "punctuation.definition.string.end.js",
-        "punctuation.definition.string.begin.js",
+        //JS
+        "keyword.control.import.js",
+        "keyword.control.as.js",
+        "keyword.control.from.js",
+        //Python
+        "keyword.control.import.python"
+      ],
+      "settings": {
+        "foreground": "#805425",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Defining symbols - Terminating statements - accessor - : = |",
+      "scope": [
+        //css - colon
+        "punctuation.separator.key-value",
+        "punctuation.terminator.rule.css",
+        //JS
+        "punctuation.accessor.js",
+        "punctuation.terminator.statement.js",
+        "keyword.operator.assignment.js",
+        "punctuation.separator.comma.js",
+        //TS - defining Symbols - | :
+        "keyword.operator.type.annotation.ts",
+        "keyword.operator.type.ts",
+        //TSX  - : ;
+        "keyword.operator.type.annotation.tsx",
+        "punctuation.terminator.statement.tsx",
+        //Python
+        "punctuation.section.function.begin.python",
+        "punctuation.section.class.begin.python",
+        "punctuation.separator.colon.python",
+        "punctuation.separator.annotation.python",
+        "punctuation.separator.period.python",
+        "keyword.operator.assignment.python"
+      ],
+      "settings": {
+        "foreground": "#a88153"
+      }
+    },
+    {
+      "name": "Functions KeyWord",
+      "scope": [
+        //CSS -- let these take function color
+        "entity.other.attribute-name.class",
+        "entity.name.tag.css",
+        //JS
+        "storage.type.function.js",
+        "storage.type.function.arrow.js",
+        //TS
+        "storage.type.function.ts",
+        "storage.type.function.arrow.ts",
+        //TSX
+        "storage.type.function.tsx",
+        "storage.type.function.arrow.tsx",
+        //Python
+        "storage.type.function.python"
+      ],
+      "settings": {
+        "foreground": "#995b21",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Function Name",
+      "scope": [
+        //JS
+        "entity.name.function.js"
+      ],
+      "settings": {
+        "foreground": "#bd8621",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Parameters",
+      "scope": [
+        //JS
+        "variable.parameter.js"
+      ],
+      "settings": {
+        "foreground": "#d4a234"
+      }
+    },
+    {
+      "name": "Var Type",
+      "scope": [
+        //JS
+        "storage.type.js"
+      ],
+      "settings": {
+        "foreground": "#553228",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Double Quote String",
+      "scope": [
+        //HTML
+        "meta.attribute.lang.html",
+        "meta.attribute.charset.html",
+        "meta.attribute.content.html",
+        "meta.attribute.http-equiv.html",
+        " meta.attribute.name.html",
+        "meta.attribute.content.html",
+        "meta.attribute.href.html",
+        "meta.attribute.rel.html",
+        "meta.attribute.type.html",
+        "meta.attribute.wrap.html",
+        " meta.attribute.cols.html",
+        "meta.attribute.rows.html",
+        " meta.attribute.id.html",
+        "meta.attribute.placeholder.html",
+        "string.quoted.single.html",
+        "meta.attribute.type.html",
+        //JS
         "string.quoted.double.js"
       ],
       "settings": {
-        "foreground": "#d19a4e",
+        "foreground": "#996e51",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Single Quote String",
+      "scope": [
+        //js
+        "string.quoted.single.js",
+        //Python
+        //for some reason python considers dbl quote single...
+        "string.quoted.single.python"
+      ],
+      "settings": {
+        "foreground": "#996e51",
         "fontStyle": "italic"
       }
     },
     {
-      "name": "js - if, else, or...",
-      "scope": ["keyword.control.conditional.js", "keyword.control.loop.js"],
+      "name": "`` <- these Quote String - Template Strings?",
+      "scope": ["string.template.js"],
+      "settings": {
+        "foreground": "#996e51",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "If Else While For And",
+      "scope": [
+        //JS
+        "keyword.control.conditional.js",
+        "keyword.control.loop.js"
+        //Python
+      ],
       "settings": {
         "foreground": "#835728",
         "fontStyle": "italic bold"
       }
     },
     {
-      "name": "js - return",
-      "scope": "keyword.control.flow.js",
+      "name": "Return",
+      "scope": ["keyword.control.flow.js"],
       "settings": {
-        "foreground": "#be8a52",
+        "foreground": "#d3a574",
         "fontStyle": "italic bold"
       }
     },
     {
-      "name": "js - function Name",
-      "scope": "entity.name.function.js",
+      "name": "Numbers",
+      "scope": [
+        //JS
+        "constant.numeric.decimal.js"
+      ],
       "settings": {
-        "foreground": "#d4945c",
+        "foreground": "#9e711e",
         "fontStyle": "bold"
       }
     },
     {
-      "name": "js - comment",
-      "scope": "comment.line.double-slash.js",
+      "name": "Arithmatic Symbols",
+      "scope": [
+        //JS
+        "keyword.operator.assignment.compound.js",
+        "keyword.operator.assignment.compound.js",
+        "keyword.operator.arithmetic.js"
+      ],
+      "settings": {
+        "foreground": "#8b562a",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Comparitive Symbols",
+      "scope": [
+        "keyword.operator.logical.js",
+        "keyword.operator.relational.js",
+        "keyword.operator.comparison.js"
+      ],
+      "settings": {
+        "foreground": "#b87e4e",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "BitWise",
+      "scope": ["keyword.operator.bitwise.js"],
+      "settings": {
+        "foreground": "#d1a74b",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "CSS JSON keys",
+      "scope": "",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        //HTML
+        "comment.block.html",
+        //CSS
+        "comment.block.css",
+        //JS
+        "comment.line.double-slash.js",
+        "comment.block.js",
+        //Python
+        "comment.line.number-sign.python",
+        //C#
+        "comment.line.double-slash.cs",
+        "entity.name.tag.localname.cs",
+        "comment.block.documentation.cs"
+      ],
       "settings": {
         "foreground": "#8b7462c2",
         "fontStyle": "italic"
@@ -326,14 +473,13 @@
       "name": "pyhton decorator (@commandlistnet)",
       "scope": "entity.name.function.decorator.python",
       "settings": {
-        "foreground": "#dcbe94",
+        "foreground": "#cc9344",
         "fontStyle": "italic bold"
       }
     },
     {
-      "name": "python - def, ==",
+      "name": "python - ==",
       "scope": [
-        "storage.type.function.python",
         "storage.type.function.async.python",
         "keyword.control.flow.python",
         "keyword.operator.logical.python",
@@ -352,13 +498,6 @@
       "settings": {
         "foreground": "#bd934b",
         "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "python - string",
-      "scope": "string.quoted.single.python",
-      "settings": {
-        "foreground": "#996e51"
       }
     },
     {
@@ -407,25 +546,23 @@
         "foreground": "#ca923e"
       }
     },
+
     {
-      "name": "python - comment",
-      "scope": "comment.line.number-sign.python",
-      "settings": {
-        "foreground": "#6f5541",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "html - tags",
-      "scope": [
-        "entity.name.tag.html",
-        "punctuation.definition.tag.begin.html",
-        "meta.tag.metadata.style.end.html",
-        "punctuation.definition.tag.end.html"
-      ],
+      "name": "html - tags - <this text>",
+      "scope": ["entity.name.tag.html", "meta.tag.metadata.style.end.html"],
       "settings": {
         "foreground": "#CC9600",
         "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "HTML - tag Brackets? - <> </>",
+      "scope": [
+        "punctuation.definition.tag.begin.html",
+        "punctuation.definition.tag.end.html"
+      ],
+      "settings": {
+        "foreground": "#a87402"
       }
     },
     {
@@ -437,15 +574,44 @@
     },
     {
       "name": "html - class attribute (Tailwind help)",
-      "scope": "meta.attribute.class.html",
+      "scope": [
+        "meta.attribute.class.html",
+        "meta.attribute.unrecognized.className.html"
+      ],
       "settings": {
-        "foreground": "#9c5c20",
+        "foreground": "#af5502",
         "fontStyle": "italic bold"
       }
     },
     {
+      "name": "HTML - alt attrib",
+      "scope": "meta.attribute.alt.html",
+      "settings": {
+        "foreground": "#996102"
+      }
+    },
+    {
       "name": "html - most dbl quoted string scopes",
-      "scope": "meta.attribute.lang.html, meta.attribute.charset.html, meta.attribute.content.html, meta.attribute.http-equiv.html, meta.attribute.name.html, meta.attribute.content.html, meta.attribute.href.html, meta.attribute.rel.html, meta.attribute.type.html, meta.attribute.wrap.html, meta.attribute.cols.html ,meta.attribute.rows.html, meta.attribute.id.html,meta.attribute.placeholder.html, string.quoted.single.html ",
+      "scope": [
+        /*
+        "meta.attribute.lang.html",
+        "meta.attribute.charset.html",
+        "meta.attribute.content.html",
+        "meta.attribute.http-equiv.html",
+        " meta.attribute.name.html",
+        "meta.attribute.content.html",
+        "meta.attribute.href.html",
+        "meta.attribute.rel.html",
+        "meta.attribute.type.html",
+        "meta.attribute.wrap.html",
+        " meta.attribute.cols.html",
+        "meta.attribute.rows.html",
+        " meta.attribute.id.html",
+        "meta.attribute.placeholder.html",
+        "string.quoted.single.html",
+        "meta.attribute.type.html"
+        */
+      ],
       "settings": {
         "foreground": "#865433",
         "fontStyle": ""
@@ -457,14 +623,6 @@
       "settings": {
         "foreground": "#74410c",
         "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "html - comments",
-      "scope": "comment.block.html",
-      "settings": {
-        "foreground": "#6f5541",
-        "fontStyle": "italic"
       }
     },
     {
@@ -591,18 +749,7 @@
         "fontStyle": "bold"
       }
     },
-    {
-      "name": "C# - comments",
-      "scope": [
-        "comment.line.double-slash.cs",
-        "entity.name.tag.localname.cs",
-        "comment.block.documentation.cs"
-      ],
-      "settings": {
-        "foreground": "#6f5541",
-        "fontStyle": "italic"
-      }
-    },
+
     {
       "name": "Markdown (README) - Headings #",
       "scope": "heading.1.markdown",
@@ -700,14 +847,6 @@
       "settings": {
         "foreground": "#b18d6a",
         "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "OpenSCAD - comments",
-      "scope": "comment.line.double-slash.scad",
-      "settings": {
-        "foreground": "#6F5541",
-        "fontStyle": "italic"
       }
     }
   ]
