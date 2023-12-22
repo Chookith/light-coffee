@@ -225,6 +225,14 @@
         "keyword.control.import.js",
         "keyword.control.as.js",
         "keyword.control.from.js",
+        //TS
+        "keyword.control.import.ts",
+        "keyword.control.as.ts",
+        "keyword.control.from.ts",
+        //TSX
+        "keyword.control.import.tsx",
+        "keyword.control.as.tsx",
+        "keyword.control.from.tsx",
         //Python
         "keyword.control.import.python"
       ],
@@ -247,6 +255,8 @@
         //TS - defining Symbols - | :
         "keyword.operator.type.annotation.ts",
         "keyword.operator.type.ts",
+        "keyword.operator.assignment.ts",
+        "punctuation.accessor.ts",
         //TSX  - : ;
         "keyword.operator.type.annotation.tsx",
         "punctuation.terminator.statement.tsx",
@@ -256,10 +266,46 @@
         "punctuation.separator.colon.python",
         "punctuation.separator.annotation.python",
         "punctuation.separator.period.python",
-        "keyword.operator.assignment.python"
+        "keyword.operator.assignment.python",
+        //C
+        "punctuation.separator.delimiter.c",
+        "punctuation.terminator.statement.c"
       ],
       "settings": {
         "foreground": "#a88153"
+      }
+    },
+    {
+      "name": "Class",
+      "scope": [
+        //TS
+        "storage.type.class.ts"
+      ],
+      "settings": {
+        "foreground": "#d19410",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Class Name",
+      "scope": "entity.name.type.class.ts",
+      "settings": {
+        "foreground": "#ac7a0f",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Export Privacy",
+      "scope": [
+        //TSX
+        "keyword.control.export.tsx"
+        //C
+        //C++
+        //C#
+      ],
+      "settings": {
+        "foreground": "#cc7614",
+        "fontStyle": "italic"
       }
     },
     {
@@ -289,7 +335,13 @@
       "name": "Function Name",
       "scope": [
         //JS
-        "entity.name.function.js"
+        "entity.name.function.js",
+        //TS
+        "entity.name.function.ts",
+        //TSX
+        "entity.name.function.tsx",
+        //Python
+        "entity.name.function.python"
       ],
       "settings": {
         "foreground": "#bd8621",
@@ -300,17 +352,37 @@
       "name": "Parameters",
       "scope": [
         //JS
-        "variable.parameter.js"
+        "variable.parameter.js",
+        //TSX
+        "variable.parameter.tsx",
+        //Python
+        "variable.parameter.function.language.python"
       ],
       "settings": {
         "foreground": "#d4a234"
       }
     },
     {
+      "name": "Async await",
+      "scope": ["storage.type.function.async.python"],
+      "settings": {
+        "foreground": "#ce9721",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "name": "Var Type",
       "scope": [
         //JS
-        "storage.type.js"
+        "storage.type.js",
+        //TS
+        "storage.type.ts",
+        //TSX
+        "storage.type.tsx",
+        //C
+        "storage.type.built-in.primitive.c"
+        //C++
+        //C#
       ],
       "settings": {
         "foreground": "#553228",
@@ -321,24 +393,14 @@
       "name": "Double Quote String",
       "scope": [
         //HTML
-        "meta.attribute.lang.html",
-        "meta.attribute.charset.html",
-        "meta.attribute.content.html",
-        "meta.attribute.http-equiv.html",
-        " meta.attribute.name.html",
-        "meta.attribute.content.html",
-        "meta.attribute.href.html",
-        "meta.attribute.rel.html",
-        "meta.attribute.type.html",
-        "meta.attribute.wrap.html",
-        " meta.attribute.cols.html",
-        "meta.attribute.rows.html",
-        " meta.attribute.id.html",
-        "meta.attribute.placeholder.html",
-        "string.quoted.single.html",
-        "meta.attribute.type.html",
+        "meta.attribute",
+
         //JS
-        "string.quoted.double.js"
+        "string.quoted.double.js",
+        //C
+        "string.quoted.double.c"
+        //C++
+        //C#
       ],
       "settings": {
         "foreground": "#996e51",
@@ -352,7 +414,11 @@
         "string.quoted.single.js",
         //Python
         //for some reason python considers dbl quote single...
-        "string.quoted.single.python"
+        "string.quoted.single.python",
+        //TS
+        "string.quoted.single.ts",
+        //TSX
+        "string.quoted.single.tsx"
       ],
       "settings": {
         "foreground": "#996e51",
@@ -372,8 +438,11 @@
       "scope": [
         //JS
         "keyword.control.conditional.js",
-        "keyword.control.loop.js"
+        "keyword.control.loop.js",
         //Python
+        "keyword.control.flow.python",
+        //TSX
+        "keyword.control.conditional.tsx"
       ],
       "settings": {
         "foreground": "#835728",
@@ -381,8 +450,14 @@
       }
     },
     {
-      "name": "Return",
-      "scope": ["keyword.control.flow.js"],
+      "name": "Return Continue Break",
+      "scope": [
+        //JS
+        "keyword.control.flow.js",
+        //TSX
+        "keyword.control.flow.tsx",
+        "keyword.control.c"
+      ],
       "settings": {
         "foreground": "#d3a574",
         "fontStyle": "italic bold"
@@ -392,7 +467,9 @@
       "name": "Numbers",
       "scope": [
         //JS
-        "constant.numeric.decimal.js"
+        "constant.numeric.decimal.js",
+        //Python
+        "constant.numeric.dec.python"
       ],
       "settings": {
         "foreground": "#9e711e",
@@ -405,7 +482,14 @@
         //JS
         "keyword.operator.assignment.compound.js",
         "keyword.operator.assignment.compound.js",
-        "keyword.operator.arithmetic.js"
+        "keyword.operator.arithmetic.js",
+        //Python
+        "keyword.operator.arithmetic.python",
+        //C
+        "keyword.operator.assignment.compound.c",
+        "keyword.operator.c"
+        //C++
+        //C#
       ],
       "settings": {
         "foreground": "#8b562a",
@@ -415,9 +499,13 @@
     {
       "name": "Comparitive Symbols",
       "scope": [
+        //JS
         "keyword.operator.logical.js",
         "keyword.operator.relational.js",
-        "keyword.operator.comparison.js"
+        "keyword.operator.comparison.js",
+        //Python
+        "keyword.operator.comparison.python",
+        "keyword.operator.logical.python"
       ],
       "settings": {
         "foreground": "#b87e4e",
@@ -433,10 +521,19 @@
       }
     },
     {
-      "name": "CSS JSON keys",
-      "scope": "",
+      "name": "CSS JSON Angular-TS keys",
+      "scope": [
+        //CSS
+        //TS
+        "meta.object-literal.key.ts",
+        "variable.object.property.ts",
+        //TSX
+        "meta.definition.variable.ts"
+        //JSON
+      ],
       "settings": {
-        "foreground": "#FF0000"
+        "foreground": "#946520",
+        "fontStyle": "italic bold"
       }
     },
     {
@@ -449,6 +546,10 @@
         //JS
         "comment.line.double-slash.js",
         "comment.block.js",
+        //TS
+        "punctuation.definition.comment.ts",
+        //TSX
+        "punctuation.definition.comment.tsx",
         //Python
         "comment.line.number-sign.python",
         //C#
@@ -479,14 +580,7 @@
     },
     {
       "name": "python - ==",
-      "scope": [
-        "storage.type.function.async.python",
-        "keyword.control.flow.python",
-        "keyword.operator.logical.python",
-        "keyword.operator.comparison.python",
-        "keyword.operator.arithmetic.python",
-        "keyword.operator.assignment.python"
-      ],
+
       "settings": {
         "foreground": "#bb8251",
         "fontStyle": "italic bold"
@@ -508,37 +602,7 @@
         "fontStyle": "italic bold"
       }
     },
-    {
-      "name": "python - imports",
-      "scope": "keyword.control.import.python",
-      "settings": {
-        "fontStyle": "bold",
-        "foreground": "#c79840"
-      }
-    },
-    {
-      "name": "Python - Function Name",
-      "scope": "entity.name.function.python",
-      "settings": {
-        "foreground": "#8b5e31",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "Python- function parameter",
-      "scope": "variable.parameter.function.language.python",
-      "settings": {
-        "foreground": "#b66916",
-        "fontStyle": "italic bold "
-      }
-    },
-    {
-      "name": "python - Numbers",
-      "scope": "constant.numeric.dec.python",
-      "settings": {
-        "foreground": "#cc7f31"
-      }
-    },
+
     {
       "name": "Python - Links",
       "scope": "string.quoted.docstring.single.python",
@@ -546,10 +610,15 @@
         "foreground": "#ca923e"
       }
     },
-
+    //HTML start
     {
-      "name": "html - tags - <this text>",
-      "scope": ["entity.name.tag.html", "meta.tag.metadata.style.end.html"],
+      "name": " html - tags - <this text>",
+      "scope": [
+        "entity.name.tag.html",
+        "meta.tag.metadata.style.end.html",
+        //TSX
+        "entity.name.tag.tsx"
+      ],
       "settings": {
         "foreground": "#CC9600",
         "fontStyle": "italic bold"
@@ -559,7 +628,10 @@
       "name": "HTML - tag Brackets? - <> </>",
       "scope": [
         "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html"
+        "punctuation.definition.tag.end.html",
+        //TSX
+        "punctuation.definition.tag.begin.tsx",
+        "punctuation.definition.tag.end.tsx"
       ],
       "settings": {
         "foreground": "#a87402"
@@ -567,7 +639,11 @@
     },
     {
       "name": "html - attributes (id = , href =,... )",
-      "scope": "entity.other.attribute-name.html",
+      "scope": [
+        "entity.other.attribute-name.html",
+        //TSX
+        "entity.other.attribute-name.tsx"
+      ],
       "settings": {
         "foreground": "#c28603"
       }
@@ -591,40 +667,15 @@
       }
     },
     {
-      "name": "html - most dbl quoted string scopes",
-      "scope": [
-        /*
-        "meta.attribute.lang.html",
-        "meta.attribute.charset.html",
-        "meta.attribute.content.html",
-        "meta.attribute.http-equiv.html",
-        " meta.attribute.name.html",
-        "meta.attribute.content.html",
-        "meta.attribute.href.html",
-        "meta.attribute.rel.html",
-        "meta.attribute.type.html",
-        "meta.attribute.wrap.html",
-        " meta.attribute.cols.html",
-        "meta.attribute.rows.html",
-        " meta.attribute.id.html",
-        "meta.attribute.placeholder.html",
-        "string.quoted.single.html",
-        "meta.attribute.type.html"
-        */
-      ],
-      "settings": {
-        "foreground": "#865433",
-        "fontStyle": ""
-      }
-    },
-    {
       "name": "html - <h1>This text</h1>",
-      "scope": "text.html.derivative",
+      "scope": ["text.html.derivative", "meta.jsx.children.tsx"],
       "settings": {
         "foreground": "#74410c",
         "fontStyle": "italic bold"
       }
     },
+
+    //C# start
     {
       "name": "C# - using",
       "scope": "keyword.other.using.cs",
