@@ -251,9 +251,11 @@
     {
       "name": "Defining symbols - Terminating statements - accessor - : = |",
       "scope": [
-        //css - colon
+        //CSS - colon
         "punctuation.separator.key-value",
         "punctuation.terminator.rule.css",
+        "punctuation.definition.entity.css",
+        "punctuation.separator.list.comma.css",
         //JS
         "punctuation.accessor.js",
         "punctuation.terminator.statement.js",
@@ -264,6 +266,7 @@
         "keyword.operator.type.ts",
         "keyword.operator.assignment.ts",
         "punctuation.accessor.ts",
+        "punctuation.separator.comma.ts",
         //TSX  - : ;
         "keyword.operator.type.annotation.tsx",
         "punctuation.terminator.statement.tsx",
@@ -563,6 +566,8 @@
       "scope": [
         //HTML
         "meta.attribute",
+        //CSS
+        "string.quoted.double.css",
         //JS
         "string.quoted.double.js",
         //TS
@@ -614,7 +619,7 @@
         "string.template.js",
         //TS
         //?? IDK if this has messed with everything else
-        "string",
+        //"string",
         //TSX
         //Python
         ///Note this is deprecated
@@ -694,8 +699,14 @@
     {
       "name": "Numbers",
       "scope": [
+        //CSS
+        "constant.numeric.css",
         //JS
         "constant.numeric.decimal.js",
+        //TS
+        "constant.numeric.decimal.ts",
+        //TSX
+        "constant.numeric.decimal.tsx",
         //Python
         "constant.numeric.dec.python",
         //C
@@ -711,12 +722,30 @@
       }
     },
     {
+      "name": "HexDecimals",
+      "scope": "constant.other.color.rgb-value.hex.css",
+      "settings": {
+        "foreground": "#c99f2c",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "name": "Arithmatic Symbols",
       "scope": [
         //JS
         "keyword.operator.assignment.compound.js",
         "keyword.operator.assignment.compound.js",
         "keyword.operator.arithmetic.js",
+        //TS
+        "keyword.operator.increment.ts",
+        "keyword.operator.decrement.ts",
+        "keyword.operator.assignment.compound.ts",
+        "keyword.operator.arithmetic.ts",
+        //TSX
+        "keyword.operator.increment.tsx",
+        "keyword.operator.decrement.tsx",
+        "keyword.operator.assignment.compound.tsx",
+        "keyword.operator.arithmetic.tsx",
         //Python
         "keyword.operator.arithmetic.python",
         //C
@@ -746,11 +775,20 @@
         "keyword.operator.logical.js",
         "keyword.operator.relational.js",
         "keyword.operator.comparison.js",
+        //TS
+        "keyword.operator.comparison.ts",
+        "keyword.operator.relational.ts",
+        "keyword.operator.logical.ts",
+        //TSX
+        "keyword.operator.comparison.tsx",
+        "keyword.operator.relational.tsx",
+        "keyword.operator.logical.tsx",
         //Python
         "keyword.operator.comparison.python",
         "keyword.operator.logical.python",
         //C
         "keyword.operator.comparison.c",
+        "keyword.operator.relational.c",
         "keyword.operator.logical.c",
         //C++
         //C#
@@ -769,10 +807,18 @@
         //JS
         "keyword.operator.bitwise.js",
         //TS
-        //TSx
+        "keyword.operator.bitwise.ts",
+        "keyword.operator.bitwise.shift.ts",
+        //TSX
+        "keyword.operator.bitwise.tsx",
+        "keyword.operator.bitwise.shift.tsx",
         //Python
+        "keyword.operator.bitwise.python",
         //C
+        ///Why do you do this to me!!!
+        "keyword.operator.bitwise.shift.c",
         //C++
+        "keyword.operator.bitwise.cpp",
         "keyword.operator.bitwise.shift.cpp",
         //C#
         "keyword.operator.bitwise.cs"
@@ -786,6 +832,7 @@
       "name": "CSS JSON Angular-TS keys",
       "scope": [
         //CSS
+        "support.type.property-name.css",
         //TS
         "meta.object-literal.key.ts",
         "variable.object.property.ts",
@@ -818,8 +865,10 @@
         "comment.block.js",
         //TS
         "punctuation.definition.comment.ts",
+        "comment.block.ts",
         //TSX
         "punctuation.definition.comment.tsx",
+        "comment.block.tsx",
         //Python
         "comment.line.number-sign.python",
         //C#
