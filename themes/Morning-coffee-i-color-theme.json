@@ -234,7 +234,14 @@
         "keyword.control.as.tsx",
         "keyword.control.from.tsx",
         //Python
-        "keyword.control.import.python"
+        "keyword.control.import.python",
+        //C
+        "keyword.control.directive.include.c",
+        //C++
+        "keyword.other.using.directive.cpp",
+        "keyword.control.directive.include.cpp",
+        //C#
+        "keyword.other.directive.using.cs"
       ],
       "settings": {
         "foreground": "#805425",
@@ -269,17 +276,114 @@
         "keyword.operator.assignment.python",
         //C
         "punctuation.separator.delimiter.c",
-        "punctuation.terminator.statement.c"
+        "punctuation.terminator.statement.c",
+        "keyword.operator.assignment.c",
+        "punctuation.separator.dot-access.c",
+        //C++
+        "punctuation.terminator.statement.cpp",
+        "punctuation.separator.dot-access.cpp",
+        "punctuation.separator.label.cpp",
+        "keyword.operator.assignment.cpp",
+        "punctuation.separator.colon.access.control.cpp",
+        "punctuation.separator.colon.case.default.cpp",
+        "punctuation.separator.colon.case.cpp",
+        //C#
+        "punctuation.separator.colon.cs",
+        "punctuation.terminator.statement.cs",
+        "punctuation.accessor.cs",
+        "keyword.operator.assignment.cs"
       ],
       "settings": {
         "foreground": "#a88153"
       }
     },
     {
+      "name": "Boolean - True",
+      "scope": [
+        //JS
+        "constant.language.boolean.true.js",
+        //TS
+        "constant.language.boolean.true.ts",
+        //TSX
+        "constant.language.boolean.true.tsx",
+        //Python
+        ///defaults to NULL
+        //C
+        ///defaults to NULL
+        //C++
+        "constant.language.true.cpp",
+        //C#
+        "constant.language.boolean.true.cs"
+      ],
+      "settings": {
+        "foreground": "#b3ad5d",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Boolean - False",
+      "scope": [
+        //JS
+        "constant.language.boolean.false.js",
+        //TS
+        "constant.language.boolean.false.ts",
+        //TSX
+        "constant.language.boolean.false.tsx",
+        //Python
+        ///defaults to NULL
+        //C
+        ///defaults to NULL
+        //C++
+        "constant.language.false.cpp",
+        //C#
+        "constant.language.boolean.false.cs"
+      ],
+      "settings": {
+        "foreground": "#89aa91",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Boolean - Null",
+      "scope": [
+        //JS
+        "constant.language.null.js",
+        //TS
+        "constant.language.null.ts",
+        //TSX
+        "constant.language.null.tsx",
+        //Python
+        //Bool is grouped as one in python
+        "constant.language.python",
+        //C
+        "constant.language.c",
+        //C++
+        "constant.language.NULL.cpp",
+        //C#
+        "constant.language.null.cs"
+      ],
+      "settings": {
+        "foreground": "#d4b44b",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "name": "Class",
       "scope": [
+        //JS
+        "storage.type.class.js",
         //TS
-        "storage.type.class.ts"
+        "storage.type.class.ts",
+        //TSX
+        "storage.type.class.tsx",
+        //Python
+        "storage.type.class.python",
+        //C
+        ///I Don't think it has class
+        //C++
+        "storage.type.class.cpp",
+        //C#
+        "storage.type.class.cs"
       ],
       "settings": {
         "foreground": "#d19410",
@@ -288,7 +392,22 @@
     },
     {
       "name": "Class Name",
-      "scope": "entity.name.type.class.ts",
+      "scope": [
+        //JS
+        "entity.name.type.class.js",
+        //TS
+        "entity.name.type.class.ts",
+        //TSX
+        "entity.name.type.class.tsx",
+        //Python
+        "entity.name.type.class.python",
+        //C
+        ///I Don't think it has class
+        //C++
+        "entity.name.type.class.cpp",
+        //C#
+        "entity.name.type.class.cs"
+      ],
       "settings": {
         "foreground": "#ac7a0f",
         "fontStyle": "italic bold"
@@ -297,11 +416,21 @@
     {
       "name": "Export Privacy",
       "scope": [
+        //TS
+        "storage.modifier.ts",
         //TSX
-        "keyword.control.export.tsx"
+        "storage.modifier.tsx",
+        "keyword.control.export.tsx",
+        //Python
+        ///Nothing
         //C
+        ///Nothing
         //C++
+        "storage.type.modifier.access.control.public.cpp",
         //C#
+        "storage.modifier.public.cs",
+        "storage.modifier.private.cs",
+        "storage.modifier.protected.cs"
       ],
       "settings": {
         "foreground": "#cc7614",
@@ -324,7 +453,14 @@
         "storage.type.function.tsx",
         "storage.type.function.arrow.tsx",
         //Python
-        "storage.type.function.python"
+        "storage.type.function.python",
+        //C
+        "punctuation.separator.pointer-access.c",
+        //C++
+        ///Nothing
+        //C#
+        ///No keyword
+        "keyword.operator.arrow.cs"
       ],
       "settings": {
         "foreground": "#995b21",
@@ -341,7 +477,14 @@
         //TSX
         "entity.name.function.tsx",
         //Python
-        "entity.name.function.python"
+        "entity.name.function.python",
+        "entity.name.function.decorator.python",
+        //C
+        "entity.name.function.c",
+        //C++
+        "entity.name.function.definition.cpp",
+        //C#
+        "entity.name.function.cs"
       ],
       "settings": {
         "foreground": "#bd8621",
@@ -356,7 +499,14 @@
         //TSX
         "variable.parameter.tsx",
         //Python
-        "variable.parameter.function.language.python"
+        "variable.parameter.function.language.python",
+        "entity.other.inherited-class.python",
+        //C
+        "meta.function.definition.parameters.c",
+        //C++
+        "entity.name.type.parameter.cpp",
+        //C#
+        "entity.name.variable.parameter.cs"
       ],
       "settings": {
         "foreground": "#d4a234"
@@ -364,7 +514,17 @@
     },
     {
       "name": "Async await",
-      "scope": ["storage.type.function.async.python"],
+      "scope": [
+        //Python
+        "storage.type.function.async.python",
+        //C
+        ///Not Supported
+        //C++
+        //?? Not sure its another libary and i'm not sure who is using it
+        //C#
+        "keyword.other.async.cs",
+        "keyword.other.await.cs"
+      ],
       "settings": {
         "foreground": "#ce9721",
         "fontStyle": "bold"
@@ -380,9 +540,18 @@
         //TSX
         "storage.type.tsx",
         //C
-        "storage.type.built-in.primitive.c"
+        "storage.type.built-in.primitive.c",
         //C++
+        "storage.type.built-in.primitive.cpp",
+        "storage.type.namespace.directive.cpp",
         //C#
+        "keyword.type.void.cs",
+        "keyword.type.int.cs",
+        "keyword.type.string.cs",
+        "keyword.type.bool.cs",
+        "storage.type.var.cs",
+        "entity.name.type.cs",
+        "storage.type.namespace.cs"
       ],
       "settings": {
         "foreground": "#553228",
@@ -394,13 +563,20 @@
       "scope": [
         //HTML
         "meta.attribute",
-
         //JS
         "string.quoted.double.js",
+        //TS
+        "string.quoted.double.ts",
+        //TSX
+        "string.quoted.double.tsx",
+        //Python
+        ///Strings are one and the same for Python
         //C
-        "string.quoted.double.c"
+        "string.quoted.double.c",
         //C++
+        "string.quoted.double.cpp",
         //C#
+        "string.quoted.double.cs"
       ],
       "settings": {
         "foreground": "#996e51",
@@ -418,7 +594,13 @@
         //TS
         "string.quoted.single.ts",
         //TSX
-        "string.quoted.single.tsx"
+        "string.quoted.single.tsx",
+        //C
+        "string.quoted.single.c",
+        //C++
+        "storage.type.namespace.directive.cpp",
+        //C#
+        "string.quoted.single.cs"
       ],
       "settings": {
         "foreground": "#996e51",
@@ -427,7 +609,23 @@
     },
     {
       "name": "`` <- these Quote String - Template Strings?",
-      "scope": ["string.template.js"],
+      "scope": [
+        //JS
+        "string.template.js",
+        //TS
+        //?? IDK if this has messed with everything else
+        "string",
+        //TSX
+        //Python
+        ///Note this is deprecated
+        "invalid.deprecated.backtick.python"
+        //C
+        ///Unrecognised by C
+        //C++
+        ///Unrecognised by C++
+        //C#
+        //for whatever reason C# doesn't pick it up
+      ],
       "settings": {
         "foreground": "#996e51",
         "fontStyle": "italic bold"
@@ -441,8 +639,29 @@
         "keyword.control.loop.js",
         //Python
         "keyword.control.flow.python",
+        //TS
+        "keyword.control.conditional.ts",
+        "keyword.control.loop.ts",
         //TSX
-        "keyword.control.conditional.tsx"
+        "keyword.control.conditional.tsx",
+        "keyword.control.loop.tsx",
+        //C
+        "keyword.control.c",
+        //C++
+        "keyword.control.if.cpp",
+        "keyword.control.else.cpp",
+        "keyword.control.for.cpp",
+        "keyword.control.while.cpp",
+        "keyword.control.do.cpp",
+        "keyword.control.switch.cpp",
+        "keyword.control.case.cpp",
+        "keyword.control.default.cpp",
+        //C#
+        "keyword.control.conditional.if.cs",
+        "keyword.control.conditional.else.cs",
+        "keyword.control.loop.foreach.cs",
+        "keyword.control.loop.for.cs",
+        "keyword.control.loop.in.cs"
       ],
       "settings": {
         "foreground": "#835728",
@@ -454,9 +673,18 @@
       "scope": [
         //JS
         "keyword.control.flow.js",
+        //TS
+        "keyword.control.flow.ts",
         //TSX
         "keyword.control.flow.tsx",
-        "keyword.control.c"
+        //C
+        ///considers return as part of if
+        //C++
+        "keyword.control.return.cpp",
+        "keyword.control.break.cpp",
+        "keyword.control.continue.cpp",
+        //C#
+        "keyword.control.flow.return.cs"
       ],
       "settings": {
         "foreground": "#d3a574",
@@ -469,7 +697,13 @@
         //JS
         "constant.numeric.decimal.js",
         //Python
-        "constant.numeric.dec.python"
+        "constant.numeric.dec.python",
+        //C
+        "constant.numeric.decimal.c",
+        //C++
+        "constant.numeric.decimal.cpp",
+        //C#
+        "constant.numeric.decimal.cs"
       ],
       "settings": {
         "foreground": "#9e711e",
@@ -487,9 +721,18 @@
         "keyword.operator.arithmetic.python",
         //C
         "keyword.operator.assignment.compound.c",
-        "keyword.operator.c"
+        "keyword.operator.c",
+        "keyword.operator.increment.c",
         //C++
+        "keyword.operator.increment.cpp",
+        "keyword.operator.decrement.cpp",
+        "keyword.operator.arithmetic.cpp",
+        "keyword.operator.assignment.compound.cpp",
         //C#
+        "keyword.operator.assignment.compound.cs",
+        "keyword.operator.increment.cs",
+        "keyword.operator.decrement.cs",
+        "keyword.operator.arithmetic.cs"
       ],
       "settings": {
         "foreground": "#8b562a",
@@ -505,7 +748,15 @@
         "keyword.operator.comparison.js",
         //Python
         "keyword.operator.comparison.python",
-        "keyword.operator.logical.python"
+        "keyword.operator.logical.python",
+        //C
+        "keyword.operator.comparison.c",
+        "keyword.operator.logical.c",
+        //C++
+        //C#
+        "keyword.operator.comparison.cs",
+        "keyword.operator.relational.cs",
+        "keyword.operator.logical.cs"
       ],
       "settings": {
         "foreground": "#b87e4e",
@@ -514,7 +765,18 @@
     },
     {
       "name": "BitWise",
-      "scope": ["keyword.operator.bitwise.js"],
+      "scope": [
+        //JS
+        "keyword.operator.bitwise.js",
+        //TS
+        //TSx
+        //Python
+        //C
+        //C++
+        "keyword.operator.bitwise.shift.cpp",
+        //C#
+        "keyword.operator.bitwise.cs"
+      ],
       "settings": {
         "foreground": "#d1a74b",
         "fontStyle": "bold"
@@ -528,12 +790,20 @@
         "meta.object-literal.key.ts",
         "variable.object.property.ts",
         //TSX
-        "meta.definition.variable.ts"
+        "meta.definition.variable.ts",
         //JSON
+        "support.type.property-name.json.comments"
       ],
       "settings": {
         "foreground": "#946520",
         "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Some Built in functions",
+      "scope": "",
+      "settings": {
+        "foreground": "#FF0000"
       }
     },
     {
@@ -560,30 +830,6 @@
       "settings": {
         "foreground": "#8b7462c2",
         "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "Json - property name",
-      "scope": "support.type.property-name.json.comments",
-      "settings": {
-        "foreground": "#b29278",
-        "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "pyhton decorator (@commandlistnet)",
-      "scope": "entity.name.function.decorator.python",
-      "settings": {
-        "foreground": "#cc9344",
-        "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "python - ==",
-
-      "settings": {
-        "foreground": "#bb8251",
-        "fontStyle": "italic bold"
       }
     },
     {
@@ -677,28 +923,8 @@
 
     //C# start
     {
-      "name": "C# - using",
-      "scope": "keyword.other.using.cs",
-      "settings": {
-        "foreground": "#da9c51",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "C# - class modifier (public, global, private, namespace)",
-      "scope": ["storage.modifier.cs", "keyword.other.namespace.cs"],
-      "settings": {
-        "fontStyle": "italic bold",
-        "foreground": "#b29278"
-      }
-    },
-    {
-      "name": "C# - var, new, bool, (type)",
-      "scope": [
-        "keyword.type.cs",
-        "keyword.other.var.cs",
-        "keyword.other.new.cs"
-      ],
+      "name": "C# - new",
+      "scope": ["keyword.other.new.cs"],
       "settings": {
         "foreground": "#cea480",
         "fontStyle": "italic bold"
@@ -706,34 +932,10 @@
     },
     {
       "name": "C# - conditonal statements",
-      "scope": [
-        "keyword.control.conditional.if.cs",
-        "keyword.other.get.cs",
-        "keyword.control.flow.return.cs",
-        "keyword.control.conditional.else.cs",
-        "keyword.other.await.cs",
-        "keyword.control.loop.for.cs",
-        "keyword.control.loop.foreach.cs",
-        "keyword.control.loop.in.cs"
-      ],
+      "scope": ["keyword.other.get.cs"],
       "settings": {
         "foreground": "#bb8251",
         "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "C# - functions",
-      "scope": "entity.name.function.cs",
-      "settings": {
-        "foreground": "#d2a44b",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "C# - semicolons",
-      "scope": "punctuation.terminator.statement.cs",
-      "settings": {
-        "foreground": "#ccad85"
       }
     },
     {
@@ -742,46 +944,7 @@
         "punctuation.definition.typeparameters.end.cs"
       ],
       "settings": {
-        "foreground": "#a7957d"
-      }
-    },
-    {
-      "name": " C# - True, False, Null",
-      "scope": [
-        "constant.language.boolean.false.cs",
-        "constant.language.boolean.true.cs"
-      ],
-      "settings": {
-        "foreground": "#b18d84",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "C# - double Quotes",
-      "scope": "string.quoted.double.cs",
-      "settings": {
-        "foreground": "#996e51",
-        "fontStyle": "italic bold"
-      }
-    },
-    {
-      "name": "C# - ASSETDATABASE. finasset",
-      "scope": "variable.other.object.cs",
-      "settings": {
-        "foreground": "#b67a49",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "name": "C# - operators - ==, !=, ++",
-      "scope": [
-        "keyword.operator.comparison.cs",
-        "keyword.operator.assignment.cs",
-        "keyword.operator.arrow.cs",
-        "keyword.operator.logical.cs"
-      ],
-      "settings": {
-        "foreground": "#bb8251"
+        "foreground": "#a87402"
       }
     },
     {
@@ -792,15 +955,6 @@
         "fontStyle": "bold"
       }
     },
-    {
-      "name": "C# - class ",
-      "scope": "keyword.other.class.cs",
-      "settings": {
-        "foreground": "#f1aa40",
-        "fontStyle": "bold"
-      }
-    },
-
     {
       "name": "Markdown (README) - Headings #",
       "scope": "heading.1.markdown",
