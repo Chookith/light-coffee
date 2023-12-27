@@ -151,6 +151,8 @@
     "editorSuggestWidget.foreground": "#4d3a2b",
     "editorWidget.background": "#ddc6b4",
 
+    "editorStickyScroll.background": "#ff0000",
+
     //"editorGhostText.foreground": "#ff0000",
     //i actually dont know what ghost text is...
 
@@ -221,6 +223,8 @@
     {
       "name": "Import as",
       "scope": [
+        //CSS
+        "keyword.control.at-rule.tailwind.tailwind",
         //JS
         "keyword.control.import.js",
         "keyword.control.as.js",
@@ -544,6 +548,7 @@
         "storage.type.tsx",
         //C
         "storage.type.built-in.primitive.c",
+        "keyword.control.directive.define.c",
         //C++
         "storage.type.built-in.primitive.cpp",
         "storage.type.namespace.directive.cpp",
@@ -639,6 +644,9 @@
     {
       "name": "If Else While For And",
       "scope": [
+        //CSS
+        "entity.name.tag.in.css",
+        "entity.name.tag.to.css",
         //JS
         "keyword.control.conditional.js",
         "keyword.control.loop.js",
@@ -700,7 +708,8 @@
       "name": "Numbers",
       "scope": [
         //CSS
-        "constant.numeric.css",
+        //Needes a fix
+        ///Search : '        //"constant.numeric.css",'
         //JS
         "constant.numeric.decimal.js",
         //TS
@@ -719,6 +728,30 @@
       "settings": {
         "foreground": "#9e711e",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Numbers - CSS fix",
+      "scope": "constant.numeric.css",
+      "settings": {
+        "foreground": "#b68a5e",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "CSS - General tag",
+      "scope": [
+        "entity.name.tag.body.css",
+        "entity.name.tag.li.css",
+        "entity.name.tag.a.css",
+        "entity.name.tag.header.css",
+        "entity.name.tag.h1.css",
+        "entity.name.tag.h2.css",
+        "entity.name.tag.h3.css",
+        "entity.name.tag.p.css"
+      ],
+      "settings": {
+        "fontStyle": "italic bold"
       }
     },
     {
@@ -871,6 +904,13 @@
         "comment.block.tsx",
         //Python
         "comment.line.number-sign.python",
+        "string.quoted.docstring.multi.python",
+        //C
+        "comment.line.double-slash.c",
+        "comment.block.c",
+        //C++
+        "comment.line.double-slash.cpp",
+        "comment.block.cpp",
         //C#
         "comment.line.double-slash.cs",
         "entity.name.tag.localname.cs",
@@ -964,6 +1004,33 @@
     {
       "name": "html - <h1>This text</h1>",
       "scope": ["text.html.derivative", "meta.jsx.children.tsx"],
+      "settings": {
+        "foreground": "#74410c",
+        "fontStyle": "italic bold"
+      }
+    },
+    //C fix start
+    {
+      "name": "C - #include <>",
+      "scope": [
+        //C
+        "punctuation.definition.string.end.c",
+        "punctuation.definition.string.begin.c",
+        //C++
+        "punctuation.definition.string.begin.cpp",
+        "punctuation.definition.string.end.cpp"
+      ],
+      "settings": {
+        "foreground": "#a87402"
+      }
+    },
+    {
+      "scope": [
+        //C
+        "string.quoted.other.lt-gt.include.c",
+        //C++
+        "string.quoted.other.lt-gt.include.cpp"
+      ],
       "settings": {
         "foreground": "#74410c",
         "fontStyle": "italic bold"
