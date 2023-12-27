@@ -151,7 +151,7 @@
     "editorSuggestWidget.foreground": "#4d3a2b",
     "editorWidget.background": "#ddc6b4",
 
-    "editorStickyScroll.background": "#ff0000",
+    "editorStickyScrollHover.background": "#ff0000",
 
     //"editorGhostText.foreground": "#ff0000",
     //i actually dont know what ghost text is...
@@ -216,7 +216,7 @@
     "welcomePage.progress.foreground": "#e0d3c9",
     "welcomePage.tileBackground": "#4d3a2b",
     "welcomePage.tileHoverBackground": "#e0d3c9",
-    "breadcrumb.foreground": "#e0d3c9",
+    "breadcrumb.foreground": "#3a271c",
     "settings.headerForeground": "#3a271c"
   },
   "tokenColors": [
